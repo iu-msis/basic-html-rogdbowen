@@ -51,53 +51,127 @@
 </nav>
 
 <table>
-		<colgroup>
-			<col span="3">
-			<col class="alternative">
-			<col>
-		</colgroup>
-		<tr>
-			<th colspan="2">Name</th>
-			<th>Name</th>
-			<th>Name</th>
-      <th>Name</th>
-		</tr>
-		<tr>
-			<td>Gorilla</td>
-			<td>Tiger</td>
-			<td>Cheetah</td>
-			<td style="background: #ddf;">Grey Wolf</td>
-			<td>Indri</td>
-		</tr>
-		<tr>
-			<td>Orangutan</td>
-			<td>Lion</td>
-			<td>Puma</td>
-			<td style="background: #ddf;">Cape hunting dog</td>
-			<td>Sifaka</td>
-		</tr>
-		<tr>
-			<td>Man</td>
-			<td>Jaguar</td>
-			<td>Serval</td>
-			<td style="background: #ddf;">Very silly big long-long named dog woof</td>
-			<td>Red ruffed lemur</td>
-		</tr>
-		<tr>
-			<td>Chimpanzee</td>
-			<td>Leopard</td>
-			<td>Caracal</td>
-			<td style="background: #ddf;">Red Fox</td>
-			<td>Ring tailed lemur</td>
-		</tr>
-		<tr>
-			<td>Bonobo</td>
-			<td>Snow leopard</td>
-			<td>Wild cat</td>
-			<td style="background: #ddf;">Fennec</td>
-			<td>Dwarf lemur</td>
-		</tr>
-	</table>
+  <!--Table style from htmldog.com-->
+  			<th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>Publisher</th>
+        <th>Page #</th>
+        <th>MSRP</th>
+
+  		</tr>
+  		<tr>
+  			<td>Running Water</td>
+  			<td>Roger Bowen</td>
+	      <td>1987</td>
+        <td>Dreamworks Mom</td>
+        <th>101</th>
+        <th>$1000</th>
+
+      </tr>
+  		<tr>
+        <td>Facing Fun</td>
+  			<td>Derek Brunson</td>
+	      <td>1962</td>
+        <td>Dad</td>
+        <th>431</th>
+        <th>$10</th>
+
+  		</tr>
+  		<tr>
+        <td>Lone Survivor</td>
+  			<td>Marcus Luttrell</td>
+	      <td>2005</td>
+        <td>Navy Seals</td>
+        <th>502</th>
+        <th>$23</th>
+
+  		</tr>
+  		<tr>
+        <td>Happy Stuff</td>
+  			<td>Deal Man</td>
+	      <td>1923</td>
+        <td>Stopper</td>
+        <th>311</th>
+        <th>$12</th>
+
+  		</tr>
+
+
+
+  	</table>
+    <form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">Title</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Book title" value="" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Author</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Author name" value="" required>
+      <div class="valid-feedback">
+        Valid!
+      </div>
+    </div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Year</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Year published" required>
+      <div class="invalid-feedback">
+        Please provide a valid year.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04">Publisher</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Publisher name" required>
+      <div class="invalid-feedback">
+        Please provide a valid publisher name.
+      </div>
+    </div>
+      <label for="validationCustom04">Page #</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Number of pages" required>
+      <div class="invalid-feedback">
+        Please provide a valid page number.
+      </div>
+    </div>
+      <label for="validationCustom04">MSRP</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Book price" required>
+      <div class="invalid-feedback">
+        Please provide a valid amount.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 
 
 <p></p>
